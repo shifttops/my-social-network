@@ -1,0 +1,17 @@
+.navigationPage{
+  &__body{
+    display: flex;
+    flex-direction: column;
+    background-color: #69adf6;
+    padding: 15px 40px 15px 10px;
+  }
+  &__link{
+    a{
+      color: #fff;
+    }
+    &:not(:last-child){
+      margin-bottom: 5px;
+    }
+  }
+
+}

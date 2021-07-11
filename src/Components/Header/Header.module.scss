@@ -1,0 +1,19 @@
+.header {
+  background-color: #69adf6;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 40px;
+  &__container {
+    display: inherit;
+  }
+  &__body {
+    display: flex;
+  }
+  &__logo {
+    img{
+      max-width: 78px;
+    }
+  }
+}

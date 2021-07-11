@@ -1,0 +1,15 @@
+.header {
+  background-color: #69adf6;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 40px; }
+  .header__container {
+    display: inherit; }
+  .header__body {
+    display: flex; }
+  .header__logo img {
+    max-width: 78px; }
+
+/*# sourceMappingURL=Header.module.css.map */

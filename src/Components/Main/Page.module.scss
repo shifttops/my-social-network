@@ -1,0 +1,32 @@
+@import "null.scss";
+
+.wrapper{
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+._container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body{
+  max-width: 100%;
+}
+
+.page {
+  flex: 1 1 auto;
+  &__body{
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    padding-top: 70px;
+  }
+}
+
+
+

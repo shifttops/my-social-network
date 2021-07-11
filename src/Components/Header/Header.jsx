@@ -1,11 +1,14 @@
 import React from 'react'
 
+import stylesHeader from './Header.module.css'
+import stylesGeneral from '../Main/Page.module.css'
+
 const Header = () => {
     return (
-        <div className="header">
-            <div className="header__container _container">
-                <div className="header__body">
-                    <div className="header__logo">
+        <div className={stylesHeader.header}>
+            <div className={`${stylesHeader.header__container} + ${stylesGeneral._container}`}>
+                <div className={stylesHeader.header__body}>
+                    <div className={stylesHeader.header__logo}>
                         <img src="https://cdn.logo.com/hotlink-ok/logo-social.png" alt="Site logo"/>
                     </div>
                 </div>
