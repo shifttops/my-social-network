@@ -1,0 +1,145 @@
+.header {
+  background-color: #69adf6;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 40px; }
+  .header__body {
+    display: flex; }
+  .header__logo img {
+    max-width: 78px; }
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input,
+button,
+textarea {
+  font-size: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer;
+  background-color: inherit; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a,
+a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit; }
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
+
+._container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+body {
+  max-width: 100%; }
+
+.page {
+  flex: 1 1 auto; }
+  .page__body {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    padding-top: 70px; }
+
+.navigation-page__body {
+  display: flex;
+  flex-direction: column;
+  background-color: #69adf6;
+  padding: 15px 40px 15px 10px; }
+.navigation-page__link a {
+  color: #fff; }
+.navigation-page__link:not(:last-child) {
+  margin-bottom: 5px; }
+
+.content-page {
+  margin-left: 20px; }
+  .content-page__body {
+    color: #fff;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px; }
+  .content-page__user {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px; }
+  .content-page__avatar {
+    background-color: #69adf6;
+    padding: 15px; }
+    .content-page__avatar img {
+      width: 250px; }
+
+.information-page {
+  background-color: #69adf6;
+  padding: 20px 10px 20px 20px; }
+  .information-page__name {
+    font-family: "Century Gothic", monospace;
+    line-height: 1.5;
+    font-size: 26px;
+    font-weight: 600; }
+  .information-page__birth {
+    font-size: 18px; }
+  .information-page__city {
+    font-size: 18px; }
+  .information-page__edu {
+    font-size: 18px; }
+
+/*# sourceMappingURL=App.css.map */
