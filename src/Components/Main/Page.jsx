@@ -13,7 +13,8 @@ const Page = (props) => {
                 <div className={stylesGeneral.page__body}>
                     <PageNav/>
                     <PageContent userInfo={props.userInfo}
-                                 postsData={props.postsData}/>
+                                 postsData={props.postsData}
+                                 dialogsData={props.dialogsData}/>
                 </div>
             </div>
         </main>

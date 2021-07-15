@@ -15,7 +15,8 @@ const App = (props) => {
             <div className={stylesApp.wrapper}>
                 <Header/>
                 <Page userInfo={props.userInfo}
-                      postsData={props.postsData}/>
+                      postsData={props.postsData}
+                      dialogsData={props.dialogsData}/>
             </div>
         </BrowserRouter>
     );

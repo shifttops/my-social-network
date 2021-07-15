@@ -16,7 +16,7 @@ const PageContent = (props) => {
                 <div className={stylesPageContent.contentPage__body}>
                     <Route path={'/profile'} render={() => <Profile userInfo={props.userInfo}
                                                                     postsData={props.postsData}/>}/>
-                    <Route path={'/messages'} render={() => <Messages/>}/>
+                    <Route path={'/messages'} render={() => <Messages dialogsData={props.dialogsData}/>}/>
                 </div>
             </section>
     )
