@@ -1,18 +1,23 @@
 //import logo from './logo.svg';
 import React from 'react';
-import stylesApp from './Components/Main/Page.module.css';
+import stylesApp from './Styles/Page.module.css';
 
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Page from "./Components/Main/Page";
 
-const App = () => {
+import {BrowserRouter} from "react-router-dom";
+
+const App = (props) => {
+
     return (
-        <div className={stylesApp.wrapper}>
-            <Header/>
-            <Page/>
-            <Footer/>
-        </div>
+        <BrowserRouter>
+            <div className={stylesApp.wrapper}>
+                <Header/>
+                <Page userInfo={props.userInfo}
+                      postsData={props.postsData}/>
+            </div>
+        </BrowserRouter>
     );
 }
 

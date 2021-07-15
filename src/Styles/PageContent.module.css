@@ -1,0 +1,9 @@
+.contentPage {
+  margin-left: 20px; }
+  .contentPage__body {
+    color: #fff;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px; }
+
+/*# sourceMappingURL=PageContent.module.css.map */

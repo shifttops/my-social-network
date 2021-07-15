@@ -1,28 +1,24 @@
 import React from 'react';
 
-import stylesPageContent from './PageContent.module.css';
-import stylesGeneral from '../Page.module.css';
-import DescriptionField from "./Discription Field/Discription Field";
+import stylesPageContent from '../../../Styles/PageContent.module.css';
+import stylesGeneral from '../../../Styles/Page.module.css';
 
-const PageContent = () => {
+import Profile from "./Profile/Profile";
+import Messages from "./Messages/Messages";
+import {Route} from "react-router";
+
+
+
+const PageContent = (props) => {
+
     return (
-        <section className={`${stylesGeneral.page__content} + ${stylesPageContent.contentPage}`}>
-            <div className={stylesPageContent.contentPage__body}>
-                <div className={stylesPageContent.contentPage__user}>
-                    <div className={stylesPageContent.contentPage__avatar}><img
-                        src="https://sun9-62.userapi.com/impg/c857532/v857532088/1694a8/lNulhqu_wkg.jpg?size=646x1080&quality=96&sign=051246fe03e9100992627a57b09849c1&type=album"
-                        alt=""/></div>
-                    <div className={`${stylesPageContent.contentPage__information} + ${stylesPageContent.informationPage}`}>
-                        <div className={stylesPageContent.informationPage__name}>Kupreeva Daria</div>
-                        <div className={stylesPageContent.informationPage__description}>
-                            <DescriptionField birthDate={'01 May'}/>
-                            <DescriptionField city={'Minsk'}/>
-                            <DescriptionField edu={'BSU'}/>
-                        </div>
-                    </div>
+            <section className={`${stylesGeneral.page__content} ${stylesPageContent.contentPage}`}>
+                <div className={stylesPageContent.contentPage__body}>
+                    <Route path={'/profile'} render={() => <Profile userInfo={props.userInfo}
+                                                                    postsData={props.postsData}/>}/>
+                    <Route path={'/messages'} render={() => <Messages/>}/>
                 </div>
-            </div>
-        </section>
+            </section>
     )
 }
 

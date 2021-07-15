@@ -1,27 +1,19 @@
 import React from 'react'
 
-import stylesPageNav from "./PageNav.module.css";
-import stylesGeneral from '../Page.module.css'
+import stylesPageNav from "../../../Styles/PageNav.module.css";
+import stylesGeneral from '../../../Styles/Page.module.css'
+import {NavLink} from "react-router-dom";
+import Link from "./Link/Link";
 
 const PageNav = () => {
     return (
-        <nav className={`${stylesGeneral.page__navigation} + ${stylesPageNav.navigationPage}`}>
+        <nav className={`${stylesGeneral.page__navigation} ${stylesPageNav.navigationPage}`}>
             <div className={stylesPageNav.navigationPage__body}>
-                <div className={`${stylesPageNav.navigationPage__profile} + ${stylesPageNav.navigationPage__link}`}>
-                    <a href="https://www.google.com/">Profile</a>
-                </div>
-                <div className={`${stylesPageNav.navigationPage__messages} + ${stylesPageNav.navigationPage__link}`}>
-                    <a href="https://www.google.com/">Messages</a>
-                </div>
-                <div className={`${stylesPageNav.navigationPage__news} + ${stylesPageNav.navigationPage__link}`}>
-                    <a href="https://www.google.com/">News</a>
-                </div>
-                <div className={`${stylesPageNav.navigationPage__music} + ${stylesPageNav.navigationPage__link}`}>
-                    <a href="https://www.google.com/">Music</a>
-                </div>
-                <div className={`${stylesPageNav.navigationPage__settings} + ${stylesPageNav.navigationPage__link}`}>
-                    <a href="https://www.google.com/">Settings</a>
-                </div>
+                <Link nextPage={'Profile'}/>
+                <Link nextPage={'Messages'}/>
+                <Link nextPage={'News'}/>
+                <Link nextPage={'Music'}/>
+                <Link nextPage={'Settings'}/>
             </div>
         </nav>
 

@@ -1,0 +1,20 @@
+.userPost{
+  display: flex;
+  align-items: center;
+  &__date{
+    font-style: italic;
+  }
+  &__avatar{
+    margin-left: 25px;
+    img{
+      width: 40px;
+      height: 40px;
+    }
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__content{
+    padding-left: 7px;
+  }
+}

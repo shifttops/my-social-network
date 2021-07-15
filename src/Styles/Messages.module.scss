@@ -1,0 +1,66 @@
+.messages{
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: 1fr;
+  gap: 15px;
+  &__dialogs{
+
+  }
+
+}
+
+.dialogsMessages{
+  padding: 5px 7px;
+  background-color: #69adf6;
+  &__items{
+    display: flex;
+    flex-direction: column;
+  }
+  &__item{
+  }
+}
+
+.dialog{
+  background-color: #c9e9ff;
+  &__messages{
+    padding: 10px 7px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__message{
+
+  }
+}
+
+.messageDialog{
+  padding-bottom: 6px;
+  &.user{
+    align-self: flex-end;
+  }
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "image name"
+                       "image text";
+  column-gap: 6px;
+  align-items: center;
+  &__avatar{
+    grid-area: image;
+    img{
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+    overflow: hidden;
+  }
+  &__userName{
+    color: #66aeff;
+    font-size: 16px;
+    font-weight: 600;
+    grid-area: name;
+  }
+  &__text{
+    font-size: 14px;
+    color: slategray;
+    grid-area: text;
+  }
+}

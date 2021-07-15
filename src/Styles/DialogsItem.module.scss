@@ -1,0 +1,41 @@
+.itemDialogs{
+  transition: background-color 0.3s ease 0s;
+  &.active{
+    background-color: rgba(74, 92, 117 , 0.6);
+    @media(any-hover: hover){
+        &:hover{
+          background-color: rgba(74, 92, 117 , 0.6);
+        }
+    }
+  }
+  padding: 10px 7px 10px 7px;
+  @media(any-hover: hover){
+      &:hover{
+        background-color: rgba(74, 92, 117 , 0.9);
+      }
+  }
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "image name"
+                       "image message";
+  column-gap: 10px;
+  &__avatar{
+    grid-area: image;
+    img{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+    overflow: hidden;
+  }
+  &__userName{
+    color: #fff;
+    grid-area: name;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  &__message{
+    color: #cce6ff;
+    grid-area: message;
+  }
+}

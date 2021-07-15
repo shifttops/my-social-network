@@ -1,17 +1,9 @@
-.contentPage {
-  margin-left: 20px;
-  &__body {
-    color: #fff;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
-  }
-  &__user{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 20px;
-  }
+.profile{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
   &__avatar {
+    align-self: start;
     background-color: #69adf6;
     padding: 15px;
     img{
@@ -19,9 +11,10 @@
     }
   }
   &__information {}
+
 }
 
-.informationPage {
+.informationProfile {
   background-color: #69adf6;
   padding: 20px 10px 20px 20px;
   &__name {
@@ -38,5 +31,16 @@
   &__city {
   }
   &__edu {
+  }
+  &__posts{
+    margin-top: 20px;
+    &__addPost{
+
+    }
+  }
+  &__post{
+    :not(:last-child){
+      margin-bottom: 10px;
+    }
   }
 }
