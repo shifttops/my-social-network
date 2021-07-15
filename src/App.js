@@ -3,7 +3,6 @@ import React from 'react';
 import stylesApp from './Styles/Page.module.css';
 
 import Header from "./Components/Header/Header";
-import Footer from "./Components/Footer/Footer";
 import Page from "./Components/Main/Page";
 
 import {BrowserRouter} from "react-router-dom";
