@@ -2,7 +2,6 @@ import React from 'react'
 
 import stylesPageNav from "../../../Styles/PageNav.module.css";
 import stylesGeneral from '../../../Styles/Page.module.css'
-import {NavLink} from "react-router-dom";
 import Link from "./Link/Link";
 
 const PageNav = () => {

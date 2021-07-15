@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACE,qBAAO;EACL,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,gBAAgB,EAAE,OAAO;EACzB,OAAO,EAAE,mBAAmB;AAG5B,uBAAC;EACC,KAAK,EAAE,IAAI;AAEb,sCAAkB;EAChB,aAAa,EAAE,GAAG",
-"sources": ["PageNav.module.scss"],
-"names": [],
-"file": "PageNav.module.css"
-}

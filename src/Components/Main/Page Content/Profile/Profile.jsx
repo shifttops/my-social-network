@@ -3,9 +3,6 @@ import React from 'react';
 import stylesProfile from '../../../../Styles/Profile.module.css';
 import stylesGeneral from '../../../../Styles/PageContent.module.css';
 
-import Description from "./Information/Description/Description";
-import InfProfileName from "./Information/User Name/infPageName";
-import Posts from "./Information/Post/Posts/Posts";
 import Avatar from "./Avatar/Avatar";
 import ProfileInfo from "./Information/Profile Information";
 

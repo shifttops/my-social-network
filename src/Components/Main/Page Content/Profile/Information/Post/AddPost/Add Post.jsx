@@ -1,7 +1,7 @@
 import React from 'react';
 
 import stylesProfile from '../../../../../../../Styles/Profile.module.css';
-import stylesAddPost from './AddPost.module.css'
+import stylesAddPost from '../../../../../../../Styles/AddPost.module.css'
 
 
 const AddPost = () => {
