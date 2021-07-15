@@ -1,0 +1,27 @@
+.profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px; }
+  .profile__avatar {
+    align-self: start;
+    background-color: #69adf6;
+    padding: 15px; }
+    .profile__avatar img {
+      width: 250px; }
+
+.informationProfile {
+  background-color: #69adf6;
+  padding: 20px 10px 20px 20px; }
+  .informationProfile__name {
+    font-family: "Century Gothic", monospace;
+    line-height: 1.5;
+    font-size: 26px;
+    font-weight: 600; }
+  .informationProfile__description {
+    font-size: 18px; }
+  .informationProfile__posts {
+    margin-top: 20px; }
+  .informationProfile__post :not(:last-child) {
+    margin-bottom: 10px; }
+
+/*# sourceMappingURL=Profile.module.css.map */

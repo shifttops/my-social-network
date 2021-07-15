@@ -1,0 +1,22 @@
+.addingPost {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-end; }
+  .addingPost__input {
+    height: 100px; }
+  .addingPost__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    min-height: 35px;
+    background-color: deepskyblue;
+    color: #fff;
+    margin-left: 15px; }
+    @media (any-hover: hover) {
+      .addingPost__button:hover {
+        background-color: #0091c3; } }
+
+/*# sourceMappingURL=AddPost.module.css.map */

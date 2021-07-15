@@ -1,0 +1,16 @@
+.userPost {
+  display: flex;
+  align-items: center; }
+  .userPost__date {
+    font-style: italic; }
+  .userPost__avatar {
+    margin-left: 25px;
+    border-radius: 50%;
+    overflow: hidden; }
+    .userPost__avatar img {
+      width: 40px;
+      height: 40px; }
+  .userPost__content {
+    padding-left: 7px; }
+
+/*# sourceMappingURL=Post.module.css.map */
