@@ -8,15 +8,13 @@ import Messages from "./Messages/Messages";
 import {Route} from "react-router";
 
 
-
 const PageContent = (props) => {
 
     return (
             <section className={`${stylesGeneral.page__content} ${stylesPageContent.contentPage}`}>
                 <div className={stylesPageContent.contentPage__body}>
-                    <Route path={'/profile'} render={() => <Profile userInfo={props.userInfo}
-                                                                    postsData={props.postsData}/>}/>
-                    <Route path={'/messages'} render={() => <Messages dialogsData={props.dialogsData}/>}/>
+                    <Route path={'/profile'} render={() => <Profile profilePage={props.profilePage}/>}/>
+                    <Route path={'/messages'} render={() => <Messages messagesPage={props.messagesPage}/>}/>
                 </div>
             </section>
     )

@@ -11,11 +11,34 @@ const Messages = (props) => {
 
     let messageID = 1;
 
-    let dialogsElements = props.dialogsData.map(dialog => <DialogsItem
+    let dialogsElements = props.messagesPage.dialogsData.map(dialog => <DialogsItem
         avatarUrl={dialog.photoUrl}
         userName={`${dialog.surname} ${dialog.name}`}
         id={dialog.id}
         message={dialog.messages[dialog.messages.length - 1]}/>);
+
+
+    let createMessagesData = (dialogsData) => {
+
+        let messagesData;
+
+        for (const dialog of dialogsData) {
+            if (dialog.id === messageID) {
+                messagesData = dialog.messages.map(message => {
+                    return(
+                        <Message url={dialog.photoUrl}
+                                 userName={`${dialog.surname} ${dialog.name}`}
+                                 text={message}/>
+                    )
+                });
+            }
+        }
+        return messagesData;
+    }
+
+    let messagesData = createMessagesData(props.messagesPage.dialogsData);
+
+
 
     return (
         <article className={`${stylesGeneral.contentPage__messages} ${stylesMessages.messages}`}>
@@ -26,14 +49,7 @@ const Messages = (props) => {
             </div>
             <div className={`${stylesMessages.dialogsMessages__dialog} ${stylesMessages.dialog}`}>
                 <div className={stylesMessages.dialog__messages}>
-                    <Message
-                        url={'https://sun9-9.userapi.com/impg/UG8VExZpPRlb6YGYJEKAeyP-rkLkLhx_U6dsdw/zwWIQ9UZ118.jpg?size=960x1280&quality=96&sign=b4742913b9a925638ad8ebaac472a4e5&type=album'}
-                        userName={`${props.dialogsData[messageID - 1].surname} ${props.dialogsData[messageID - 1].name}`}
-                        text={props.dialogsData[messageID - 1].messages[0]}/>
-                    <Message
-                        url={'https://sun9-9.userapi.com/impg/UG8VExZpPRlb6YGYJEKAeyP-rkLkLhx_U6dsdw/zwWIQ9UZ118.jpg?size=960x1280&quality=96&sign=b4742913b9a925638ad8ebaac472a4e5&type=album'}
-                        userName={`${props.dialogsData[messageID - 1].surname} ${props.dialogsData[messageID - 1].name}`}
-                        text={props.dialogsData[messageID - 1].messages[1]}/>
+                    {messagesData}
                 </div>
             </div>
         </article>

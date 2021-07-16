@@ -12,9 +12,8 @@ const Page = (props) => {
             <div className={`${stylesGeneral.page__container} ${stylesGeneral._container}`}>
                 <div className={stylesGeneral.page__body}>
                     <PageNav/>
-                    <PageContent userInfo={props.userInfo}
-                                 postsData={props.postsData}
-                                 dialogsData={props.dialogsData}/>
+                    <PageContent messagesPage={props.messagesPage}
+                                 profilePage={props.profilePage}/>
                 </div>
             </div>
         </main>

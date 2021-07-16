@@ -6,19 +6,14 @@ import reportWebVitals from './reportWebVitals';
 
 import state from "./Redux/state";
 
-let postsData = state.postsData;
+let messagesPage = state.messagesPage;
 
-const userInfo = state.userInfo;
-
-let dialogsData = state.dialogsData;
-
-
+let profilePage = state.profilePage;
 
 ReactDOM.render(
   <React.StrictMode>
-    <App userInfo={userInfo}
-         postsData={postsData}
-         dialogsData={dialogsData}/>
+    <App messagesPage={messagesPage}
+         profilePage={profilePage}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
