@@ -1,7 +1,7 @@
 import React from 'react';
 
-import stylesProfile from '../../../../../../Styles/Profile.module.css';
-import stylesPost from '../../../../../../Styles/Post.module.css'
+import stylesProfile from '../../../../../../../Styles/Profile.module.css';
+import stylesPost from '../../../../../../../Styles/Post.module.css'
 
 
 const Post = (props) => {

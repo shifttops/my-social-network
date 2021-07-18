@@ -1,10 +1,12 @@
 .messages {
+  flex: 1 1 auto;
   display: grid;
   grid-template-columns: 350px 1fr;
   grid-template-rows: 1fr;
   gap: 15px; }
 
 .dialogsMessages {
+  align-self: flex-start;
   padding: 5px 7px;
   background-color: #69adf6; }
   .dialogsMessages__items {
@@ -12,9 +14,14 @@
     flex-direction: column; }
 
 .dialog {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 20px;
   background-color: #c9e9ff; }
   .dialog__messages {
-    padding: 10px 7px;
+    padding: 0 20px;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column; }
 
@@ -22,11 +29,13 @@
   padding-bottom: 6px;
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-areas: "image name" "image text";
+  grid-template-areas: "image name date" "image text date";
   column-gap: 6px;
   align-items: center; }
-  .messageDialog.user {
+  .messageDialog.outgoing {
     align-self: flex-end; }
+  .messageDialog.incoming {
+    align-self: flex-start; }
   .messageDialog__avatar {
     grid-area: image;
     overflow: hidden; }
@@ -43,5 +52,39 @@
     font-size: 14px;
     color: slategray;
     grid-area: text; }
+  .messageDialog__date {
+    grid-area: date;
+    color: slategray;
+    font-style: italic; }
+
+.actionsDialog {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px; }
+  .actionsDialog__input {
+    flex: 1 1 auto;
+    overflow: hidden;
+    height: 30px;
+    resize: none;
+    font-family: 'Century Gothic', sans-serif;
+    border-radius: 5px;
+    border: 1px solid #727272;
+    align-items: center;
+    padding: 4px 17px; }
+  .actionsDialog__button {
+    align-self: flex-end;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    min-height: 30px;
+    background-color: deepskyblue;
+    color: #fff; }
+    @media (any-hover: hover) {
+      .actionsDialog__button:hover {
+        background-color: #0091c3; } }
 
 /*# sourceMappingURL=Messages.module.css.map */

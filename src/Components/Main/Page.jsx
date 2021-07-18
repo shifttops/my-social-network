@@ -13,7 +13,8 @@ const Page = (props) => {
                 <div className={stylesGeneral.page__body}>
                     <PageNav/>
                     <PageContent messagesPage={props.messagesPage}
-                                 profilePage={props.profilePage}/>
+                                 profilePage={props.profilePage}
+                                 dispatch={props.dispatch}/>
                 </div>
             </div>
         </main>

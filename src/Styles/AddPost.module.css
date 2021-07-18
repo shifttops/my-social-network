@@ -3,7 +3,14 @@
   display: flex;
   align-items: flex-end; }
   .addingPost__input {
-    height: 100px; }
+    height: 100px;
+    font-size: 15px;
+    font-family: 'Century Gothic', sans-serif;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #727272;
+    resize: none;
+    overflow: auto; }
   .addingPost__button {
     display: inline-flex;
     justify-content: center;

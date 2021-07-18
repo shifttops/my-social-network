@@ -3,7 +3,7 @@ import React from 'react';
 import stylesProfile from '../../../../../Styles/Profile.module.css';
 import InfProfileName from "./User Name/infPageName";
 import Description from "./Description/Description";
-import Posts from "./Post/Posts/Posts";
+import Posts from "./Posts/Posts";
 
 const ProfileInfo = (props) => {
     return(
@@ -12,8 +12,11 @@ const ProfileInfo = (props) => {
             <Description birthDate={props.birthDate}
                          city={props.city}
                          edu={props.edu}/>
+
             <Posts postsData={props.postsData}
-                   avatarUrl={props.avatarUrl}/>
+                   avatarUrl={props.avatarUrl}
+                   dispatch={props.dispatch}
+            />
         </div>
     )
 }

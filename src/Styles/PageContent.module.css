@@ -3,7 +3,8 @@
   .contentPage__body {
     color: #fff;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px; }
+    grid-template-rows: 1fr;
+    gap: 10px;
+    padding-bottom: 40px; }
 
 /*# sourceMappingURL=PageContent.module.css.map */

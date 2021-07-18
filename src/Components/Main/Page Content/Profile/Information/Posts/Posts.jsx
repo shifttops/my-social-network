@@ -1,8 +1,8 @@
 import React from 'react';
 
-import stylesProfile from '../../../../../../../Styles/Profile.module.css';
-import Post from "../Post";
-import AddPost from "../AddPost/Add Post.jsx";
+import stylesProfile from '../../../../../../Styles/Profile.module.css';
+import Post from "./Post/Post";
+import AddPostContainer from "./AddPost/Add Post Container";
 
 const Posts = (props) => {
 
@@ -14,7 +14,8 @@ const Posts = (props) => {
 
     return (
         <div className={stylesProfile.informationProfile__posts}>
-            <AddPost/>
+            <AddPostContainer dispatch={props.dispatch}
+            />
             My posts:
             {completePosts}
         </div>
