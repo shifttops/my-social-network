@@ -3,26 +3,24 @@ import React from 'react';
 import stylesPageContent from '../../../Styles/PageContent.module.css';
 import stylesGeneral from '../../../Styles/Page.module.css';
 
-import Profile from "./Profile/Profile";
-import Messages from "./Messages/Messages";
 import {Route} from "react-router";
 import MessagesContainer from "./Messages/Messages Сontainer";
+import SearchContainer from "./Search/SearchContainer";
+import ProfileContainer from "./Profile/ProfileContainer.jsx";
 
-const PageContent = (props) => {
+class PageContent extends React.Component{
+    render() {
+        return (
+            <section className={`${stylesGeneral.page__content} ${stylesPageContent.contentPage}`}>
+                <div className={stylesPageContent.contentPage__body}>
+                    <Route path={'/profile'} render={() => <ProfileContainer/>}/>
+                    <Route path={'/messages'} render={() => <MessagesContainer/>}/>
+                    <Route path={'/search'} render={() => <SearchContainer/>}/>
+                </div>
+            </section>
 
-    return (
-        <section className={`${stylesGeneral.page__content} ${stylesPageContent.contentPage}`}>
-            <div className={stylesPageContent.contentPage__body}>
-                <Route path={'/profile'} render={() => <Profile profilePage={props.profilePage}
-                                                                dispatch={props.dispatch}/>}/>
-                <Route path={'/messages'} render={() => <MessagesContainer profilePage={props.profilePage}
-                                                                  messagesPage={props.messagesPage}
-                                                                  dispatch={props.dispatch}
-                />}/>
-            </div>
-        </section>
-
-    )
+        )
+    }
 }
 
 export default PageContent;

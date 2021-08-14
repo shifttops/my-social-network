@@ -12,6 +12,6 @@
   .navigationPage__link a.active {
     color: #727272; }
 .navigationPage__link:not(:last-child) {
-  margin-bottom: 5px; }
+  margin-bottom: 7px; }
 
 /*# sourceMappingURL=PageNav.module.css.map */

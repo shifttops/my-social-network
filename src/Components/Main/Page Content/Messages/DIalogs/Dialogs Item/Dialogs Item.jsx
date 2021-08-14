@@ -3,15 +3,11 @@ import React from 'react';
 import stylesItem from '../../../../../../Styles/DialogsItem.module.css';
 import stylesMessages from '../../../../../../Styles/Messages.module.css';
 import {NavLink} from "react-router-dom";
-import {updateNewMessageInformationActionCreator} from "../../../../../../Redux/store";
 
 const DialogsItem = (props) => {
 
     let onMessageChange = () => {
-        props.dispatch({
-            type: 'UPDATE_NEW_MESSAGE_INFORMATION',
-            id: props.id,
-        });
+        props.updateMessageID(props.id)
     }
 
     return(

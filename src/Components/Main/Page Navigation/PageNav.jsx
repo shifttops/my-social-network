@@ -13,6 +13,7 @@ const PageNav = () => {
                 <Link nextPage={'News'}/>
                 <Link nextPage={'Music'}/>
                 <Link nextPage={'Settings'}/>
+                <Link nextPage={'Search'}/>
             </div>
         </nav>
 

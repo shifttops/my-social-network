@@ -24,13 +24,12 @@
     font-weight: 600;
   }
   &__description{
+    flex: 1 1 auto;
     font-size: 18px;
+    padding: 5px;
   }
-  &__birth {
-  }
-  &__city {
-  }
-  &__edu {
+  &__descriptionField{
+    font-style: italic;
   }
   &__posts{
     margin-top: 20px;
@@ -41,6 +40,20 @@
   &__post{
     :not(:last-child){
       margin-bottom: 10px;
+    }
+  }
+}
+
+.contacts{
+  &__body{
+    display: flex;
+    padding-top: 7px;
+    margin: 0 -8px;
+  }
+  &__contact{
+    margin: 0 8px;
+    img{
+      width: 29px;
     }
   }
 }

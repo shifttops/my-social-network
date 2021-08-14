@@ -18,12 +18,12 @@ let initialState = {
                 },
                 {
                     message: 'You are the best one',
-                    date: '',
+                    date: '17.07.2021',
                     flag: 'incoming',
                 },
                 {
                     message: 'I love you too',
-                    date: '',
+                    date: '17.07.2021',
                     flag: 'outgoing',
                 },
             ],
@@ -36,7 +36,7 @@ let initialState = {
             messages: [
                 {
                     message: 'I`m going home, sis',
-                    date: '',
+                    date: '17.07.2021',
                     flag: 'incoming',
                 },
             ]
@@ -48,7 +48,7 @@ let initialState = {
             messages: [
                 {
                     message: 'How are you, baby?',
-                    date: '',
+                    date: '17.07.2021',
                     flag: 'incoming',
                 },
             ]
@@ -59,13 +59,16 @@ let initialState = {
         message: {
             message: '',
             date: new Date().toLocaleDateString(),
-            flag: 'incoming',
+            flag: 'outgoing',
         }
     }
 };
 
 
 const messagesReducer = (state = initialState, action) => {
+
+    let stateCopy = Object.assign({}, state)
+
     switch (action.type) {
         case CONSTANTS.ADD_MESSAGE: {
             let newMessage = {
@@ -77,27 +80,29 @@ const messagesReducer = (state = initialState, action) => {
                 }
             }
 
-            state.dialogsData.forEach(dialog => {
+            stateCopy.dialogsData = Object.assign([], state.dialogsData);
+
+            stateCopy.dialogsData.forEach(dialog => {
                 if (dialog.id === newMessage.id && newMessage.message.message !== undefined && newMessage.message.message !== '') {
                     dialog.messages.push(newMessage.message)
                 }
             })
 
 
-            return messagesReducer(state, {
+            return messagesReducer(stateCopy, {
                 type: CONSTANTS.UPDATE_NEW_MESSAGE_INFORMATION,
-                id: state.newMessage.id,
+                id: stateCopy.newMessage.id,
                 message: '',
             });
         }
         case CONSTANTS.UPDATE_NEW_MESSAGE_INFORMATION: {
 
             let updateNewMessageText = (message) => {
-                state.newMessage.message.message = message;
+                stateCopy.newMessage.message.message = message;
             }
 
             let updateNewMassageId = (messageID) => {
-                state.newMessage.id = messageID;
+                stateCopy.newMessage.id = messageID;
             }
 
             updateNewMessageText(action.message);
@@ -105,14 +110,14 @@ const messagesReducer = (state = initialState, action) => {
 
             break;
         }
-        default: return state;
+        default: return stateCopy;
     }
 
-    return state;
+    return stateCopy;
 }
 
-export const AddMessageActionCreator = () => ({type: CONSTANTS.ADD_MESSAGE});
-export const updateNewMessageInformationActionCreator = (message, messageID) => ({
+export const addMessage = () => ({type: CONSTANTS.ADD_MESSAGE});
+export const updateNewMessageInformation = (message, messageID) => ({
     type: CONSTANTS.UPDATE_NEW_MESSAGE_INFORMATION,
     message: message,
     id: messageID,

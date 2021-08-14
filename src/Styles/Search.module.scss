@@ -1,0 +1,96 @@
+.btn{
+  text-align: center;
+
+  padding: 5px;
+  font-size: 18px;
+  grid-area: button;
+  color: #fff;
+  background-color: deepskyblue;
+  transition: all 0.3s ease 0s;
+  @media(any-hover: hover){
+    &:hover{
+      background-color: #0091c3;
+    }
+  }
+}
+
+.search{
+  &__body{
+    text-align: center;
+    padding: 10px;
+    background-color: #66aeff;
+    flex: 1 1 auto;
+  }
+  &__label{
+    text-align: left;
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff9f9;
+    margin-bottom: 20px;
+  }
+  &__button{
+    font-size: 24px;
+    padding: 7px;
+    border-radius: 5px;
+  }
+}
+
+.usersList{
+  &__body{
+    text-align: left;
+    padding: 30px;
+  }
+}
+
+.user{
+  &:not(:last-child){
+    margin-bottom: 20px;
+  }
+  &__body{
+    display: grid;
+    grid-template-areas: "avatar info"
+                         "avatar info"
+                         "button info";
+    grid-template-columns: 80px 300px;
+    column-gap: 20px;
+    row-gap: 7px;
+  }
+  &__info{
+    grid-area: info;
+    border: 2px solid #ffffff;
+    background-color: #cce6ff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__avatar{
+    text-align: center;
+    grid-area: avatar;
+    img{
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+    }
+    overflow: hidden;
+  }
+  &__btn{
+  }
+}
+
+.infoUser{
+  align-self: flex-start;
+  color: #727272;
+  padding: 5px;
+  &__name{
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__age{
+    align-self: flex-end;
+  }
+  &__city{
+    align-self: flex-end;
+  }
+
+}
+

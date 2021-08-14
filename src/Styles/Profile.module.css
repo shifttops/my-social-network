@@ -18,10 +18,23 @@
     font-size: 26px;
     font-weight: 600; }
   .informationProfile__description {
-    font-size: 18px; }
+    flex: 1 1 auto;
+    font-size: 18px;
+    padding: 5px; }
+  .informationProfile__descriptionField {
+    font-style: italic; }
   .informationProfile__posts {
     margin-top: 20px; }
   .informationProfile__post :not(:last-child) {
     margin-bottom: 10px; }
+
+.contacts__body {
+  display: flex;
+  padding-top: 7px;
+  margin: 0 -8px; }
+.contacts__contact {
+  margin: 0 8px; }
+  .contacts__contact img {
+    width: 29px; }
 
 /*# sourceMappingURL=Profile.module.css.map */

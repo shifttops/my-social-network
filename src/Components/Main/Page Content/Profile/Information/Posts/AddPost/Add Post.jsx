@@ -10,6 +10,7 @@ const AddPost = (props) => {
     let addPost = () => {
         props.createNewPost();
 
+        console.log(props.postsData);
         newPostRef.current.value = '';
     }
 
